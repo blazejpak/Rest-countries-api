@@ -28,12 +28,6 @@ const router = createBrowserRouter(
 );
 
 function App() {
-  // useEffect(()=>{
-  //   if(window.math)
-  // },[])
-
-  useEffect(() => {}, []);
-
   return (
     <RouterProvider router={router}>
       <RootPage />

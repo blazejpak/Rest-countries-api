@@ -19,7 +19,7 @@ const router = createBrowserRouter(
     <Route path="/" errorElement={<ErrorPage />} element={<RootPage />}>
       <Route path="/" errorElement={<ErrorPage />} element={<HomePage />} />
       <Route
-        path="/$id"
+        path="/detailCountry/:id"
         errorElement={<ErrorPage />}
         element={<DetailCountryPage />}
       />

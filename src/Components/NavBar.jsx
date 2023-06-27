@@ -6,7 +6,6 @@ import { MoonOutline, Moon } from "react-ionicons";
 const NavBar = () => {
   const dispatch = useDispatch();
   const isDarkMode = useSelector((state) => state.themeSlice.darkMode);
-  console.log(isDarkMode);
 
   useEffect(() => {
     if (window.matchMedia("(prefers-color-scheme:dark)").matches) {
@@ -23,20 +22,20 @@ const NavBar = () => {
   }, [isDarkMode]);
 
   const darkModeHandler = () => {
-    // setIsDarkMode((prevMode) => !prevMode);
+    dispatch({ type: "data/themeReducer", payload: !isDarkMode });
   };
 
   return (
-    <header className="h-[80px] flex justify-between items-center px-4 bg-[#fff] dark:bg-[#2B3844] dark:text-white sm:px-20">
+    <header className="h-[80px] flex justify-between items-center px-4 bg-[#fff] dark:bg-[#2B3844] dark:text-white sm:px-20 ">
       <h1 className="sm:text-2xl text-base">Where in the world?</h1>
       <div
         className="flex gap-2 items-center justify-center cursor-pointer hover:scale-110 transition-transform duration-300"
         onClick={darkModeHandler}
       >
-        {dispatch ? (
+        {isDarkMode ? (
           <Moon height="20px" width="20px" color="white" />
         ) : (
-          <MoonOutline height="20px" width="20px" />
+          <MoonOutline height="20px" width="20px" color="black" />
         )}
         <p className="sm:text-base text-xs font-semibold ">Dark Mode</p>
       </div>

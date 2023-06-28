@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
-import { Search, ChevronDownOutline } from "react-ionicons";
 import { useSelector, useDispatch } from "react-redux";
+
+import ChevronDownOutline from "../assets/Icons/ChevronDownOutline";
+import Search from "../assets/Icons/Search";
 
 const FilterCountries = ({ onSearch, onChange }) => {
   const dispatch = useDispatch();
@@ -34,7 +36,7 @@ const FilterCountries = ({ onSearch, onChange }) => {
         onSubmit={searchInputSubmit}
         className="flex w-full md:w-[343px] h-12 sm:h-14 dark:bg-[#2B3844] bg-white items-center pl-8 rounded-lg gap-1 sm:gap-6 shadow-sm"
       >
-        <Search color={isDarkMode ? "white" : "#B2B2B2"} />
+        <Search fill={isDarkMode ? "white" : "#B2B2B2"} />
         <input
           value={searchInput}
           onChange={(e) => setSearchInput(e.target.value)}
@@ -48,7 +50,7 @@ const FilterCountries = ({ onSearch, onChange }) => {
       >
         <div className="flex items-center justify-center w-full cursor-pointer gap-12 h-full">
           <p>Filter by Region</p>
-          <ChevronDownOutline color={isDarkMode ? "white" : "#000"} />
+          <ChevronDownOutline fill={isDarkMode ? "white" : "#000"} />
         </div>
         {clickedFilterRegion ? (
           <div className="absolute w-52 h-40 bg-white dark:bg-[#2B3844] top-16 rounded-lg flex flex-col pl-6 gap-2 justify-center shadow">

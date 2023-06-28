@@ -2,9 +2,10 @@ import { Link } from "react-router-dom";
 import React from "react";
 
 const CountryItem = ({ item }) => {
-  const { country, capital, region, population, flag, id } = item;
+  const { country, capital, region, population, flag, cca } = item;
+
   return (
-    <Link to={`/detailCountry/${country.common}`} className="cursor-pointer">
+    <Link to={`/detailCountry/${cca}`} className="cursor-pointer">
       <div className="flex flex-col w-[264px] dark:bg-[#2B3844] bg-[#FFFFFF] h-[336px] rounded-lg overflow-hidden shadow">
         <div className="h-[160px] w-[264px] ">
           {

@@ -70,7 +70,7 @@ const DetailCountryPage = () => {
         <section className="  px-10 xl:px-20 max-w-[1608px] mt-10 lg:mt-20 flex flex-col gap-20">
           <div
             onClick={goBackHandler}
-            className="w-36 h-10 rounded shadow bg-white dark:bg-[#2B3844] flex justify-center items-center gap-3  cursor-pointer hover:scale-105 active:scale-110"
+            className="w-36 h-10 rounded shadow bg-white dark:bg-[#2B3844] flex justify-center items-center gap-3  cursor-pointer hover:scale-105 active:scale-110 transition-all duration-300"
           >
             <ArrowBackOutline
               height="20px"
@@ -141,7 +141,7 @@ const DetailCountryPage = () => {
                             <div
                               onClick={() => navigate(`/detailCountry/${item}`)}
                               key={item}
-                              className="px-7 py-1 rounded-sm bg-white shadow dark:bg-[#2B3844] cursor-pointer hover:scale-105 active:scale-110"
+                              className="px-7 py-1 rounded-sm bg-white shadow dark:bg-[#2B3844] cursor-pointer hover:scale-105 active:scale-110 transition-all duration-300"
                             >
                               <p>{item}</p>
                             </div>

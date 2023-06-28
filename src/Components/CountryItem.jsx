@@ -5,8 +5,11 @@ const CountryItem = ({ item }) => {
   const { country, capital, region, population, flag, cca } = item;
 
   return (
-    <Link to={`/detailCountry/${cca}`} className="cursor-pointer">
-      <div className="flex flex-col w-[264px] dark:bg-[#2B3844] bg-[#FFFFFF] h-[336px] rounded-lg overflow-hidden shadow">
+    <Link
+      to={`/detailCountry/${cca}`}
+      className="cursor-pointer hover:scale-105 active:scale-110 transition-all duration-300"
+    >
+      <div className="flex flex-col w-[264px] dark:bg-[#2B3844] bg-[#FFFFFF] h-[336px] rounded-lg overflow-hidden shadow ">
         <div className="h-[160px] w-[264px] ">
           {
             <img

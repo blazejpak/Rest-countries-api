@@ -33,6 +33,7 @@ const NavBar = () => {
       <div
         className="flex gap-2 items-center justify-center cursor-pointer hover:scale-110 transition-transform duration-300"
         onClick={darkModeHandler}
+        aria-hidden={true}
       >
         {isDarkMode ? (
           <Moon color="white" height="20px" width="20px" />

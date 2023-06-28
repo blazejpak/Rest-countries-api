@@ -35,13 +35,9 @@ const NavBar = () => {
         onClick={darkModeHandler}
       >
         {isDarkMode ? (
-          <div className="h-[20px] w-[20px]" aria-hidden={true}>
-            <Moon color="white" />
-          </div>
+          <Moon color="white" height="20px" width="20px" />
         ) : (
-          <div className="h-[20px] w-[20px]">
-            <MoonOutline color="black" />
-          </div>
+          <MoonOutline color="black" height="20px" width="20px" />
         )}
         <p className="sm:text-base text-xs font-semibold ">Dark Mode</p>
       </div>

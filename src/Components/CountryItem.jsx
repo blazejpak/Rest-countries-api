@@ -14,7 +14,7 @@ const CountryItem = ({ item }) => {
           {
             <img
               src={flag.svg}
-              alt={flag.alt}
+              alt={`${flag.alt}`}
               className="object-cover h-full w-full"
             />
           }

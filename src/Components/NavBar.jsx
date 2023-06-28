@@ -27,7 +27,9 @@ const NavBar = () => {
 
   return (
     <header className="h-[80px] flex justify-between items-center px-4 bg-[#fff] dark:bg-[#2B3844] dark:text-white sm:px-20 ">
-      <h1 className="sm:text-2xl text-base">Where in the world?</h1>
+      <h1 className="sm:text-2xl text-base font-extrabold">
+        Where in the world?
+      </h1>
       <div
         className="flex gap-2 items-center justify-center cursor-pointer hover:scale-110 transition-transform duration-300"
         onClick={darkModeHandler}

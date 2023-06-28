@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import { MoonOutline, Moon } from "react-ionicons";
+import Moon from "../assets/Icons/moon";
+import MoonOutline from "../assets/Icons/moonOutline";
 
 const NavBar = () => {
   const dispatch = useDispatch();
@@ -35,11 +36,7 @@ const NavBar = () => {
         onClick={darkModeHandler}
         aria-hidden={true}
       >
-        {isDarkMode ? (
-          <Moon color="white" height="20px" width="20px" />
-        ) : (
-          <MoonOutline color="black" height="20px" width="20px" />
-        )}
+        {isDarkMode ? <Moon /> : <MoonOutline />}
         <p className="sm:text-base text-xs font-semibold ">Dark Mode</p>
       </div>
     </header>
